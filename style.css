@@ -1,0 +1,152 @@
+*{   
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+}
+
+body div{
+    margin: 30px;
+}
+.ball{
+    z-index: 0;
+    background-color: hsl(185, 75%, 42%);
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    background-image: linear-gradient(to right top, #19a2ae, #1aa5b1, #1aa8b4, #1babb8, #1dbecca3);
+
+    
+    
+}
+
+@keyframes move-balls-1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(100px, 0) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, 150px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-100px, 0) rotate(270deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+
+@keyframes move-balls-2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-100px, 0) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, -100px) rotate(180deg);
+    }
+    75% {
+        transform: translate(150px, 0) rotate(270deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+
+.ball-1{
+    position: absolute;
+    top: -250px;
+    left: -125px;
+
+    animation: move-balls-1;
+    animation-duration: 7s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ball-2{
+    position: absolute;
+    bottom: -250px;
+    right: -125px;
+
+    animation: move-balls-2;
+    animation-duration: 7s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.attribution{
+   z-index: 2;
+   background-color: rgba(255, 255, 255, 0);
+}
+
+.card{
+    z-index: 2;
+    background-color: #fff;
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.card-image-top{
+    border-radius: 10px 10px 1px 1px;
+}
+.card-image{
+    border-radius: 100%;
+    
+    position: relative;
+    left:35%;
+    bottom: 50px;
+}
+
+.card-rest{
+    position: relative;
+    bottom: 15%;
+}
+
+.acc-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.titles{
+    margin-top: -20px;
+}
+
+.followers{
+    width: max-content;
+}
+
+span{
+    color: gray;
+    opacity: 0.7;
+}
+h3 span{
+    padding: 0 2px 0 2px;
+}
+
+ hr{
+    width: 60%;
+    margin-left: 20%;
+ }
